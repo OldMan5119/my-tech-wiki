@@ -101,6 +101,7 @@ export default {
       const { sidebar } = this.$site.themeConfig
       const { data } = this.$frontmatter.pageComponent
       const key = data.path || data.key
+      console.info("data-->", data)
       let keyArray = key.split('/');
       let catalogueList = (sidebar[`/${keyArray[0]}/`]);
       if (keyArray.length > 1) {
