@@ -11,7 +11,7 @@ const WEB_SITE = `https://${DOMAIN_NAME}` // 网址
 
 export default defineConfig4CustomTheme<VdoingThemeConfig>({
     // theme: 'vdoing', // 使用npm主题包
-    theme: resolve(__dirname, '../../vdoing'), // 使用本地主题包
+    theme: resolve(__dirname, '../../vdoing'),// 使用本地主题包
 
     locales: {
         '/': {
@@ -28,55 +28,40 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         nav: [
             {text: '首页', link: '/'},
             {
-                text: '前端',
+                text: '前端开发',
                 link: '/web/', //目录页链接，此处link是vdoing主题新增的配置项，有二级导航时，可以点击一级导航跳到目录页
                 items: [
-                    // 说明：以下所有link的值只是在相应md文件头部定义的永久链接（不是什么特殊编码）。另外，注意结尾是有斜杠的
                     {
-                        text: '编程语言',
+                        text: '前端基础',
                         items: [
-                            {text: 'JavaScript基础', link: '/pages/8143cc480faf9a11/'},
-                            {text: 'JavaScript教程', link: '/note/javascript/'},
-                            {text: 'JavaScript高级程序设计', link: '/note/js/'},
-                            {text: 'Node.js基础', link: '/pages/8143cc480faf9a11/'},
-                            {text: 'TypeScript', link: '/pages/51afd6/',},
+                            {text: 'HTML', link: "/web/#HTML"},
+                            {text: 'CSS', link: "/web/#CSS"},
+                            {text: 'jQuery', link: "/web/#jQuery"},
+                            {text: 'JavaScript', link: '/web/#JavaScript'},
+                            {text: 'Node.js', link: '/web/#Node.js'},
                         ],
                     },
                     {
                         text: '开源框架',
                         items: [
-
-                            {text: 'ES6教程', link: '/note/es6/'},
-                            {text: 'Vue', link: '/note/vue/'},
-                            {text: 'React', link: '/note/react/'},
-                            {
-                                text: '《TypeScript 从零实现 axios》',
-                                link: '/note/typescript-axios/',
-                            },
-                            {
-                                text: '《Git》',
-                                // link: '/note/git/',
-                                link: '/web/#开源框架',
-                            },
-
-                            {
-                                text: 'JS设计模式总结',
-                                link: '/pages/4643cd/',
-                            },
+                            {text: 'Vue', link: '/notes/vue3/'},
+                            {text: 'React', link: '/notes/react/'},
+                        ],
+                    },
+                    {
+                        text: '专题',
+                        items: [
+                            {text: 'TypeScript从零实现Axios', link: '/notes/front_zt/'},
                         ],
                     },
                 ],
             },
             {
-                text: '安卓/Java',
-                link: '/ui/',
-                items: [
-                    {text: 'HTML', link: '/pages/8309a5b876fc95e3/'},
-                    {text: 'CSS', link: '/pages/0a83b083bdf257cb/'},
-                ],
+                text: '安卓开发',
+                link: '/Android/'
             },
             {
-                text: 'AI相关',
+                text: '收藏资料',
                 link: '/technology/',
                 items: [
                     {text: '技术文档', link: '/pages/9a7ee40fc232253e/'},
@@ -87,25 +72,14 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
             },
             {
                 text: '随笔',
-                link: '/more/',
+                link: '/freeInfo/',
                 items: [
                     {text: '学习', link: '/pages/f2a556/'},
                     {text: '面试', link: '/pages/aea6571b7a8bae86/'},
                     {text: '心情杂货', link: '/pages/2d615df9a36a98ed/'},
-                    {text: '实用技巧', link: '/pages/baaa02/'},
-                    {text: '友情链接', link: '/friends/'},
+                    {text: '实用技巧', link: '/pages/baaa02/'}
                 ],
             },
-            // { text: '关于', link: '/about/' },
-            // {
-            // text: '收藏',
-            // link: '/pages/beb6c0bd8a66cea6/',
-            // items: [
-            //   { text: '网站', link: '/pages/beb6c0bd8a66cea6/' },
-            //   { text: '资源', link: '/pages/eee83a9211a70f9d/' },
-            //   { text: 'Vue资源', link: '/pages/12df8ace52d493f6/' },
-            // ],
-            // },
             // {
             //   text: '索引',
             //   link: '/archives/',
